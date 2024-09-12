@@ -1,0 +1,133 @@
+/**** HEADER ****/
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 95vh;
+    background: url('/images/header-bg.webp') no-repeat center center;
+    background-size: cover;
+}
+
+.header .row {
+    max-width: 50%;
+}
+
+.header h1 {
+    color: #fff;
+}
+
+.header p {
+    margin-top: 14px;
+    color: #fff;
+}
+
+.header .btns-row {
+    margin-top: 48px;
+}
+
+/**** SERVICES ****/
+.services {
+    padding-top: 60px;
+    padding-bottom: 100px;
+    background-color: #F5FAFA;
+}
+
+.services .row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.services .item .bottom {
+    background-color: #33A699;
+    padding: 16px 34px 32px 34px;
+}
+
+.services .services-link {
+    background-color: rgba(255, 255, 255, 0.7);
+    width: 43px;
+    height: 43px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.services .services-link:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.services .item .bottom div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.services .item h3 {
+    max-width: 30%;
+}
+
+.services .item p {
+    margin-top: 16px;
+}
+
+.services h3, .services p {
+    color: #fff;
+}
+
+/**** VEHICLES ****/
+.vehicles {
+    padding-top: 68px;
+}
+
+.vehicles .row {
+    margin-top: 36px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+}
+
+.vehicles .item {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+
+.vehicles .item .right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.vehicles .benefits {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 14px;
+}
+
+.vehicles .benefit {
+    display: flex;
+    gap: 8px;
+}
+
+.vehicles .benefit img {
+    width: 16px;
+}
+
+/**** GALLERY ****/
+.gallery {
+    padding-top: 110px;
+}
+
+.gallery .row {
+    margin-top: 56px;
+}
+
+/**** WHY US ****/
+.whyus {
+    background-color: #F5FBFA;
+    margin-top: 124px;
+    padding-top: 58px;
+    padding-bottom: 56px;
+}
