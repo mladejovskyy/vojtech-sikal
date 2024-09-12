@@ -63,13 +63,13 @@ export default function Navbar() {
                 {open ? <ul className="nav-links" data-aos={mobile ? "slide-left" : ""} data-aos-delay="100"
                             data-aos-duration="400" data-aos-once="false">
                     <>
-                        <li onClick={() => scrollToTarget("intro")} data-aos="fade-down" data-aos-delay="0"
+                        <li onClick={() => scrollToTarget("header")} data-aos="fade-down" data-aos-delay="0"
                             data-aos-once="true">Úvod
                         </li>
                         <li onClick={() => scrollToTarget("services")} data-aos="fade-down" data-aos-delay="0"
                             data-aos-once="true">Služby
                         </li>
-                        <li onClick={() => scrollToTarget("vehiclepark")} data-aos="fade-down" data-aos-delay="100"
+                        <li onClick={() => scrollToTarget("vehicles")} data-aos="fade-down" data-aos-delay="100"
                             data-aos-once="true">Vozový park
                         </li>
                         <li onClick={() => scrollToTarget("contact")} data-aos="fade-down" data-aos-delay="200"

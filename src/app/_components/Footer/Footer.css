@@ -1,12 +1,20 @@
 footer {
     padding-top: 60px;
     padding-bottom: 30px;
-    background-color: #FCFCFC;
+    background-color: #F6F6F6;
 }
 
 footer .row {
+    width: 100%;
     display: grid;
-    grid-template-columns: 1fr 1fr 1.2fr 1fr 1fr;
+    grid-template-columns: 0.4fr 1fr;
+    justify-items: end;
+}
+
+footer .row .item-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 128px;
 }
 
 footer .row .item {
@@ -20,7 +28,7 @@ footer .row .item.about {
 }
 
 footer .row .item.about img {
-    max-height: 16px;
+    height: 54px;
     width: auto;
 }
 
@@ -82,7 +90,7 @@ footer .row .item.links:nth-child(3) a {
 footer .row .item.links a:hover,
 footer .row .item.links button:hover {
     transition: all 0.3s ease-in-out;
-    color: #2971B7;
+    color: #33A699  ;
 }
 
 footer .bottom-line {
@@ -125,18 +133,15 @@ footer .footer-email {
 }
 
 @media (max-width: 1280px) {
-    footer .row {
-        grid-template-columns: 1fr 0.5fr 1fr 1fr 1.5fr;
+    footer .row .item-wrapper {
+        gap: 60px;
     }
 }
 
 @media (max-width: 1024px) {
-    footer .row {
-        display: grid;
-        grid-template-columns: 1.5fr 1fr 1fr;
-        gap: 2rem;
+    footer .row .item-wrapper {
+        gap: 16px;
     }
-
     footer .item.empty {
         display: none;
     }
@@ -164,6 +169,10 @@ footer .footer-email {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         gap: 2rem;
+    }
+
+    footer .row .item-wrapper {
+        width: 100%;
     }
 
     footer .row .item.links a,

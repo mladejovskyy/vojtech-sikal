@@ -5,12 +5,13 @@
     top: 0;
     z-index: 100;
     backdrop-filter: blur(10px);
+    transition: all .3s ease;
     margin-top: 40px;
 }
 
 .nav-bg-scroll {
     backdrop-filter: blur(8px);
-    transition: all .5s ease;
+    transition: all .3s ease;
     margin-top: 0;
 }
 

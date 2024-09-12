@@ -69,12 +69,9 @@ h4 {
 }
 
 p {
-}
-
-.paragraph {
     font-size: 16px;
     line-height: 1.6;
-    color: #393939;
+    color: #000;
 }
 
 @media (max-width: 475px) {
@@ -145,10 +142,10 @@ p {
 .btn-secondary {
     background-color: #ffffff;
     padding: 16px 24px;
-    color: #2971B7;
+    color: #33A699;
     border-radius: 1px;
     transition: all 0.2s ease;
-    border: 1px solid #2971B7;
+    border: 1px solid #FFF;
     font-weight: 600;
     cursor: pointer;
     display: flex;

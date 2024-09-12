@@ -3,9 +3,13 @@ import Navbar from "./_components/Navbar/Navbar";
 import Footer from "./_components/Footer/Footer";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Pagination } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/pagination';
 import "./globals.css";
 import "./style.css";
-import {useEffect, useState} from "react";
+import {useEffect, useRef} from "react";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -42,7 +46,7 @@ export default function Home() {
                                 úprav, a efektivní demolice různých objektů.
                             </p>
                             <div className="btns-row">
-                                <button className="btn-primary">
+                                <button onClick={() => scrollToTarget('services')} className="btn-primary">
                                     Zobrazit více o službách
                                 </button>
                             </div>
@@ -436,9 +440,54 @@ export default function Home() {
                 <div className="container">
                     <h4>Při práci</h4>
                     <h2>Galerie naší práce</h2>
-                    <div className="row">
+                </div>
+                <div className="row">
+                    <Swiper
+                        slidesPerView={4}
+                        spaceBetween={30}
+                        pagination={{
+                            clickable: true,
+                        }}
+                        className="mySwiper"
+                    >
+                        <SwiperSlide>
+                            <img
+                                src="/images/gallery-photo1.webp"
+                                alt=""
+                                draggable="false"
+                                loading="lazy"
+                                placeholder="blur"
+                            />
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <img
+                                src="/images/gallery-photo2.webp"
+                                alt=""
+                                draggable="false"
+                                loading="lazy"
+                                placeholder="blur"
+                            />
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <img
+                                src="/images/gallery-photo3.webp"
+                                alt=""
+                                draggable="false"
+                                loading="lazy"
+                                placeholder="blur"
+                            />
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <img
+                                src="/images/gallery-photo4.webp"
+                                alt=""
+                                draggable="false"
+                                loading="lazy"
+                                placeholder="blur"
+                            />
+                        </SwiperSlide>
 
-                    </div>
+                    </Swiper>
                 </div>
             </section>
             <section className="whyus" id="whyus">
@@ -447,6 +496,51 @@ export default function Home() {
                         <div className="item">
                             <h4>proč si vybrat nás</h4>
                             <h2>Základním kamenem naší firmy je dlouhodobá férová spolupráce</h2>
+                            <p>
+                                Společnost VŠ Trans Group s.r.o. byla založena v roce 2011 za účelem poskytování služeb v oblasti přepravy veškerých sypkých materiálů a zemních prací v okolí města Mladá Boleslav. Postupem času se hlavní region působení firmy posunul i za hranice středočeského kraje do okolí Liberce, Hradce Králové a především Prahy.
+                            </p>
+                            <p>
+
+                                V roce 2016 se společnost rozrostla o první jumbo soupravu, díky které se zařadila na vnitrostátní trh velkoobjemové kamionové dopravy.
+                            </p>
+                            <p>
+                                V současné době je společnost VŠ Trans Group s.r.o. neustále se rozrůstající firmou, která se specializuje mimo jiné i na mezinárodní kamionovou dopravu.
+                            </p>
+
+                        </div>
+                        <div className="item">
+                            <img
+                                src="/images/whyus-photo.webp"
+                                alt=""
+                                draggable="false"
+                                loading="lazy"
+                                placeholder="blur"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section className="contact" id="contact">
+                <div className="container">
+                    <div className="row">
+                        <div className="item">
+                            <h4>objednání služeb</h4>
+                            <h2>Cenovou nabídku tvoříme po detailním vyměření práce</h2>
+                            <p>Zavolejte nám s vaším požadavkem a my se vám pokusíme vyhovět</p>
+                            <div className="btns-row">
+                                <Link href={'tel:607727509'}>
+                                    <button className="btn-secondary">+420 607 727 509</button>
+                                </Link>
+                            </div>
+                        </div>
+                        <div className="item">
+                            <img
+                                src="/images/contact-photo.webp"
+                                alt=""
+                                draggable="false"
+                                loading="lazy"
+                                placeholder="blur"
+                            />
                         </div>
                     </div>
                 </div>
