@@ -46,7 +46,7 @@ export default function Home() {
                                 materiálů, komplexní zemní práce, včetně výkopů a terénních
                                 úprav, a efektivní demolice různých objektů.
                             </p>
-                            <div className="btns-row">
+                            <div className="btns-row" data-aos="fade-right" data-aos-once="true" data-aos-delay="0">
                                 <button onClick={() => scrollToTarget('services')} className="btn-primary">
                                     Zobrazit více o službách
                                 </button>
@@ -60,7 +60,7 @@ export default function Home() {
                     <h4>Služby</h4>
                     <h2>Jaké služby nabízíme?</h2>
                     <div className="row">
-                        <div className="item">
+                        <div className="item" data-aos="zoom-in-up" data-aos-once="true" data-aos-delay="0">
                             <Image
                                 src="/images/services-photo1.webp"
                                 alt=""
@@ -75,7 +75,7 @@ export default function Home() {
                             <div className="bottom">
                                 <div>
                                     <h3>Smluvní autodoprava</h3>
-                                    <Link href={"/sluzby/smluvni-autodoprava"} className="services-link">
+                                    <Link href={"/smluvni-autodoprava"} className="services-link">
                                         <img
                                             className="services-arrow"
                                             src="/images/services-arrow.svg"
@@ -92,7 +92,7 @@ export default function Home() {
                                 </p>
                             </div>
                         </div>
-                        <div className="item">
+                        <div className="item" data-aos="zoom-in-up" data-aos-once="true" data-aos-delay="100">
                             <Image
                                 src="/images/services-photo2.webp"
                                 alt=""
@@ -107,7 +107,7 @@ export default function Home() {
                             <div className="bottom">
                                 <div>
                                     <h3>Zemní práce</h3>
-                                    <Link href={"/sluzby/zemni-prace"} className="services-link">
+                                    <Link href={"/zemni-prace"} className="services-link">
                                         <img
                                             className="services-arrow"
                                             src="/images/services-arrow.svg"
@@ -123,7 +123,7 @@ export default function Home() {
                                 </p>
                             </div>
                         </div>
-                        <div className="item">
+                        <div className="item" data-aos="zoom-in-up" data-aos-once="true" data-aos-delay="200">
                             <Image
                                 src="/images/services-photo3.webp"
                                 alt=""
@@ -138,7 +138,7 @@ export default function Home() {
                             <div className="bottom">
                                 <div>
                                     <h3>Demolice objektů</h3>
-                                    <Link href={"/sluzby/demolice-objektu"} className="services-link">
+                                    <Link href={"/demolice-objektu"} className="services-link">
                                         <img
                                             className="services-arrow"
                                             src="/images/services-arrow.svg"
@@ -162,7 +162,7 @@ export default function Home() {
                     <h4>vozový park</h4>
                     <h2>Jaké máme vozidla?</h2>
                     <div className="row">
-                        <div className="item">
+                        <div className="item" data-aos="fade-up" data-aos-once="true" data-aos-delay="0">
                             <Image
                                 src="/images/vehicles-photo1.webp"
                                 alt=""
@@ -211,7 +211,7 @@ export default function Home() {
                                 </div>
                             </div>
                         </div>
-                        <div className="item">
+                        <div className="item" data-aos="fade-up" data-aos-once="true" data-aos-delay="50">
                             <Image
                                 src="/images/vehicles-photo2.webp"
                                 alt=""
@@ -260,7 +260,7 @@ export default function Home() {
                                 </div>
                             </div>
                         </div>
-                        <div className="item">
+                        <div className="item" data-aos="fade-up" data-aos-once="true" data-aos-delay="100">
                             <Image
                                 src="/images/vehicles-photo3.webp"
                                 alt=""
@@ -309,7 +309,7 @@ export default function Home() {
                                 </div>
                             </div>
                         </div>
-                        <div className="item">
+                        <div className="item" data-aos="fade-up" data-aos-once="true" data-aos-delay="150">
                             <Image
                                 src="/images/vehicles-photo4.webp"
                                 alt=""
@@ -358,7 +358,7 @@ export default function Home() {
                                 </div>
                             </div>
                         </div>
-                        <div className="item">
+                        <div className="item" data-aos="fade-up" data-aos-once="true" data-aos-delay="200">
                             <Image
                                 src="/images/vehicles-photo5.webp"
                                 alt=""
@@ -396,7 +396,7 @@ export default function Home() {
                                 </div>
                             </div>
                         </div>
-                        <div className="item">
+                        <div className="item" data-aos="fade-up" data-aos-once="true" data-aos-delay="250">
                             <Image
                                 src="/images/vehicles-photo6.webp"
                                 alt=""
@@ -444,8 +444,9 @@ export default function Home() {
                 </div>
                 <div className="row">
                     <Swiper
-                        slidesPerView={3}
+                        slidesPerView={'auto'}
                         spaceBetween={30}
+                        loop={true}
                         pagination={{
                             clickable: true,
                         }}
@@ -557,7 +558,7 @@ export default function Home() {
                             <h4>objednání služeb</h4>
                             <h2>Cenovou nabídku tvoříme po detailním vyměření práce</h2>
                             <p>Zavolejte nám s vaším požadavkem a my se vám pokusíme vyhovět</p>
-                            <div className="btns-row">
+                            <div className="btns-row" data-aos="fade-right" data-aos-once="true">
                                 <Link href={'tel:607727509'}>
                                     <button className="btn-secondary">+420 607 727 509</button>
                                 </Link>

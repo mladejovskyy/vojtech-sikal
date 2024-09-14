@@ -69,32 +69,27 @@ export default function Navbar() {
 
 
     return (
-        <div className={isScroll ? 'nav-bg nav-bg-scroll' : 'nav-bg'}>
+        <div className={isScroll || mobile ? 'nav-bg nav-bg-scroll' : 'nav-bg'}>
             <nav className='container'>
-                <img src="/images/nav-logo.svg" className="logo"
-                     alt=""
-                     draggable="false" loading="eager"
-                     placeholder="blur"/>
-                {open ? <ul className="nav-links" data-aos={mobile ? "slide-left" : ""} data-aos-delay="100"
-                            data-aos-duration="400" data-aos-once="false">
+                <img
+                    onClick={() => scrollToTarget("header")}
+                    src="/images/nav-logo.svg" className="logo"
+                    alt=""
+                    draggable="false" loading="eager"
+                    placeholder="blur"/>
+                {open ? <ul className="nav-links" data-aos={mobile ? "slide-left" : ""}>
                     <>
-                        <li onClick={() => scrollToTarget("header")} data-aos="fade-down" data-aos-delay="0"
-                            data-aos-once="true">Úvod
+                        <li onClick={() => scrollToTarget("header")}>Úvod
                         </li>
-                        <li onClick={() => scrollToTarget("services")} data-aos="fade-down" data-aos-delay="0"
-                            data-aos-once="true">Služby
+                        <li onClick={() => scrollToTarget("services")}>Služby
                         </li>
-                        <li onClick={() => scrollToTarget("vehicles")} data-aos="fade-down" data-aos-delay="100"
-                            data-aos-once="true">Vozový park
+                        <li onClick={() => scrollToTarget("vehicles")}>Vozový park
                         </li>
-                        <li onClick={() => scrollToTarget("contact")} data-aos="fade-down" data-aos-delay="200"
-                            data-aos-once="true">Kontakty
+                        <li onClick={() => scrollToTarget("contact")}>Kontakty
                         </li>
-                        <div data-aos="fade-left" data-aos-delay="400" data-aos-once="true">
-                            <button onClick={() => scrollToTarget("services")} className="btn-primary burger">
-                                Zobrazit služby
-                            </button>
-                        </div>
+                        <button onClick={() => scrollToTarget("services")} className="btn-primary burger">
+                            Zobrazit služby
+                        </button>
                     </>
 
                 </ul> : ""}

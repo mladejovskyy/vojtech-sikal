@@ -1,8 +1,14 @@
+@media (max-width: 475px) {
+    button.btn-primary, button.btn-secondary, .btns-row {
+        width: 100%;
+    }
+}
+
 /**** HEADER ****/
 .header {
     display: flex;
     flex-direction: column;
-    padding-top: 25vh;
+    padding-top: 27vh;
     min-height: 80vh;
     background: url('/images/header-bg.webp') no-repeat center center;
     background-size: cover;
@@ -267,6 +273,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-items: end;
+    gap: 64px;
 }
 
 .whyus .item {
@@ -275,8 +282,16 @@
     align-items: flex-start;
 }
 
+.whyus .item img {
+    width: 90%;
+}
+
+.whyus .item:last-of-type {
+    align-items: flex-end;
+}
+
 .whyus p {
-    margin-top: 40px;
+    margin-top: 16px;
 }
 
 @media (max-width: 1280px) {
@@ -394,5 +409,15 @@
 
     .contact .item img {
         width: 80%;
+    }
+}
+
+@media (max-width: 400px) {
+    .contact .row {
+        padding: 32px 0 32px 16px;
+    }
+
+    .contact .item:first-of-type {
+        padding-right: 16px;
     }
 }
