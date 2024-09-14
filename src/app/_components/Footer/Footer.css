@@ -24,7 +24,8 @@ footer .row .item {
 }
 
 footer .row .item.about {
-    display: block;
+    display: flex;
+    align-items: flex-start;
 }
 
 footer .row .item.about img {
@@ -55,7 +56,7 @@ footer .row .item.about span {
 }
 
 footer .row .item.about span:first-of-type {
-    margin-top: 30px;
+    margin-top: 24px;
 }
 
 footer .row .item.links h2 {
@@ -90,7 +91,7 @@ footer .row .item.links:nth-child(3) a {
 footer .row .item.links a:hover,
 footer .row .item.links button:hover {
     transition: all 0.3s ease-in-out;
-    color: #33A699  ;
+    color: #33A699;
 }
 
 footer .bottom-line {
@@ -142,6 +143,7 @@ footer .footer-email {
     footer .row .item-wrapper {
         gap: 16px;
     }
+
     footer .item.empty {
         display: none;
     }
@@ -164,7 +166,7 @@ footer .footer-email {
     }
 }
 
-@media (max-width: 475px) {
+@media (max-width: 640px) {
     footer .row {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
@@ -179,5 +181,11 @@ footer .footer-email {
     footer .row .item.links button {
         margin-bottom: 10px;
         font-weight: 300;
+    }
+}
+
+@media (max-width: 450px) {
+    footer .row .item-wrapper {
+        grid-template-columns: 1fr;
     }
 }

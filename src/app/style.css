@@ -61,6 +61,7 @@
     background-color: rgba(255, 255, 255, 0.7);
     width: 43px;
     height: 43px;
+    border-radius: 2px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -73,6 +74,7 @@
 
 .services .item .bottom div {
     display: flex;
+    align-items: center;
     justify-content: space-between;
 }
 
@@ -161,11 +163,31 @@
     .vehicles .row {
         grid-template-columns: 1fr;
     }
+
+    .vehicles .benefit {
+        grid-template-columns: 0.08fr 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .vehicles .benefit {
+        grid-template-columns: 0.1fr 1fr;
+    }
+}
+
+@media (max-width: 640px) {
+    .vehicles .benefit {
+        grid-template-columns: 0.15fr 1fr;
+    }
 }
 
 @media (max-width: 475px) {
     .vehicles .item {
         grid-template-columns: 1fr;
+    }
+
+    .vehicles .benefit {
+        grid-template-columns: 0.08fr 1fr;
     }
 }
 
@@ -178,9 +200,9 @@
     margin-top: 56px;
 }
 
-.swiper-wrapper {
+.gallery .swiper-wrapper {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 .gallery .swiper, .swiper-wrapper {
@@ -190,10 +212,47 @@
 .gallery .swiper-slide {
     width: auto !important;
     margin-right: 30px;
+    cursor: grab;
+}
+
+.gallery .swiper-slide:active {
+    cursor: grabbing;
 }
 
 .gallery .swiper-slide img {
-    width: 500px;
+    width: 27vw;
+}
+
+.swiper-navigation {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px; /* Space between the two arrows */
+    margin-top: 20px; /* Space between slides and navigation */
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    cursor: pointer;
+    font-size: 24px;
+    color: #151515; /* Dark color */
+    border: none;
+    background: none;
+    padding: 5px;
+    transition: color 0.3s ease;
+}
+
+/* Change color to muted when disabled */
+.swiper-button-prev.swiper-button-disabled,
+.swiper-button-next.swiper-button-disabled {
+    color: #6c6c6c; /* Muted color */
+    cursor: not-allowed;
+}
+
+/* Hover effect */
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+    color: #000; /* Darker color on hover */
 }
 
 /**** WHY US ****/
@@ -217,7 +276,7 @@
 }
 
 .whyus p {
-    margin-top: 26px;
+    margin-top: 40px;
 }
 
 @media (max-width: 1280px) {
@@ -238,6 +297,10 @@
     .whyus .item:last-of-type {
         width: 100%;
         flex-direction: row;
+    }
+
+    .whyus .item img {
+        width: 100%;
     }
 }
 
@@ -284,4 +347,52 @@
 
 .contact .btns-row {
     margin-top: 46px;
+}
+
+@media (max-width: 1280px) {
+    .contact .item img {
+        width: 80%;
+        margin-left: auto;
+    }
+}
+
+@media (max-width: 1024px) {
+    .contact .row {
+        padding-bottom: 24px;
+    }
+
+    .contact .item:first-of-type {
+        padding-right: 66px;
+    }
+
+    .contact .item:last-of-type {
+        position: relative;
+        margin-top: -40px;
+    }
+
+    .contact .row {
+        grid-template-columns: 1fr;
+    }
+
+    .contact .item img {
+        width: 60%;
+    }
+}
+
+@media (max-width: 640px) {
+    .contact .row {
+        padding: 32px 0 32px 32px;
+    }
+
+    .contact .item:first-of-type {
+        padding-right: 32px;
+    }
+
+    .contact .item:last-of-type {
+        margin-top: 20px;
+    }
+
+    .contact .item img {
+        width: 80%;
+    }
 }

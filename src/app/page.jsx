@@ -3,10 +3,11 @@ import Navbar from "./_components/Navbar/Navbar";
 import Footer from "./_components/Footer/Footer";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination } from 'swiper/modules';
+import {Swiper, SwiperSlide} from 'swiper/react';
+import {Pagination, Navigation} from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
+import 'swiper/css/navigation';
 import "./globals.css";
 import "./style.css";
 import {useEffect, useRef} from "react";
@@ -74,7 +75,7 @@ export default function Home() {
                             <div className="bottom">
                                 <div>
                                     <h3>Smluvní autodoprava</h3>
-                                    <Link href={"/smluvni-autodoprava"} className="services-link">
+                                    <Link href={"/sluzby/smluvni-autodoprava"} className="services-link">
                                         <img
                                             className="services-arrow"
                                             src="/images/services-arrow.svg"
@@ -106,7 +107,7 @@ export default function Home() {
                             <div className="bottom">
                                 <div>
                                     <h3>Zemní práce</h3>
-                                    <Link href={"/zemni-prace"} className="services-link">
+                                    <Link href={"/sluzby/zemni-prace"} className="services-link">
                                         <img
                                             className="services-arrow"
                                             src="/images/services-arrow.svg"
@@ -137,7 +138,7 @@ export default function Home() {
                             <div className="bottom">
                                 <div>
                                     <h3>Demolice objektů</h3>
-                                    <Link href={"/demolice-objektu"} className="services-link">
+                                    <Link href={"/sluzby/demolice-objektu"} className="services-link">
                                         <img
                                             className="services-arrow"
                                             src="/images/services-arrow.svg"
@@ -443,11 +444,16 @@ export default function Home() {
                 </div>
                 <div className="row">
                     <Swiper
-                        slidesPerView={4}
+                        slidesPerView={3}
                         spaceBetween={30}
                         pagination={{
                             clickable: true,
                         }}
+                        navigation={{
+                            nextEl: '.swiper-button-next',
+                            prevEl: '.swiper-button-prev',
+                        }}
+                        modules={[Navigation]}
                         className="mySwiper"
                     >
                         <SwiperSlide>
@@ -470,7 +476,7 @@ export default function Home() {
                         </SwiperSlide>
                         <SwiperSlide>
                             <img
-                                src="/images/gallery-photo3.webp"
+                                src="/images/gallery-photo1.webp"
                                 alt=""
                                 draggable="false"
                                 loading="lazy"
@@ -479,15 +485,34 @@ export default function Home() {
                         </SwiperSlide>
                         <SwiperSlide>
                             <img
-                                src="/images/gallery-photo4.webp"
+                                src="/images/gallery-photo2.webp"
                                 alt=""
                                 draggable="false"
                                 loading="lazy"
                                 placeholder="blur"
                             />
                         </SwiperSlide>
-
+                        <SwiperSlide>
+                            <img
+                                src="/images/gallery-photo1.webp"
+                                alt=""
+                                draggable="false"
+                                loading="lazy"
+                                placeholder="blur"
+                            />
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <img
+                                src="/images/gallery-photo2.webp"
+                                alt=""
+                                draggable="false"
+                                loading="lazy"
+                                placeholder="blur"
+                            />
+                        </SwiperSlide>
                     </Swiper>
+
+
                 </div>
             </section>
             <section className="whyus" id="whyus">
@@ -497,14 +522,19 @@ export default function Home() {
                             <h4>proč si vybrat nás</h4>
                             <h2>Základním kamenem naší firmy je dlouhodobá férová spolupráce</h2>
                             <p>
-                                Společnost VŠ Trans Group s.r.o. byla založena v roce 2011 za účelem poskytování služeb v oblasti přepravy veškerých sypkých materiálů a zemních prací v okolí města Mladá Boleslav. Postupem času se hlavní region působení firmy posunul i za hranice středočeského kraje do okolí Liberce, Hradce Králové a především Prahy.
+                                Společnost VŠ Trans Group s.r.o. byla založena v roce 2011 za účelem poskytování služeb
+                                v oblasti přepravy veškerých sypkých materiálů a zemních prací v okolí města Mladá
+                                Boleslav. Postupem času se hlavní region působení firmy posunul i za hranice
+                                středočeského kraje do okolí Liberce, Hradce Králové a především Prahy.
                             </p>
                             <p>
 
-                                V roce 2016 se společnost rozrostla o první jumbo soupravu, díky které se zařadila na vnitrostátní trh velkoobjemové kamionové dopravy.
+                                V roce 2016 se společnost rozrostla o první jumbo soupravu, díky které se zařadila na
+                                vnitrostátní trh velkoobjemové kamionové dopravy.
                             </p>
                             <p>
-                                V současné době je společnost VŠ Trans Group s.r.o. neustále se rozrůstající firmou, která se specializuje mimo jiné i na mezinárodní kamionovou dopravu.
+                                V současné době je společnost VŠ Trans Group s.r.o. neustále se rozrůstající firmou,
+                                která se specializuje mimo jiné i na mezinárodní kamionovou dopravu.
                             </p>
 
                         </div>

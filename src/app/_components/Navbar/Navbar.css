@@ -4,13 +4,13 @@
     left: 0;
     top: 0;
     z-index: 100;
-    backdrop-filter: blur(10px);
     transition: all .3s ease;
     margin-top: 40px;
 }
 
 .nav-bg-scroll {
-    backdrop-filter: blur(8px);
+    background-color: #fff;
+    box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.15);
     transition: all .3s ease;
     margin-top: 0;
 }
@@ -21,7 +21,7 @@ nav {
     justify-content: space-between;
     align-items: center !important;
     position: relative;
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.9);
 }
 
 nav img {
@@ -55,10 +55,8 @@ nav .nav-links li:hover {
     color: #33A699;
 }
 
-nav .btn-purple {
-    display: inline-flex;
-    align-items: center;
-    padding: 12px 32px;
+nav .btn-primary {
+    border-radius: 6px;
 }
 
 
@@ -93,7 +91,7 @@ nav .btn-purple {
         margin-top: 0;
         gap: 3em;
         height: fit-content;
-        background-color: #F2F7FB;
+        background-color: #fff;
         box-shadow: 0 4px 4px -2px rgba(0, 0, 0, 0.25);
     }
 
@@ -161,12 +159,12 @@ nav .btn-purple {
 
 @media (max-width: 425px) {
     nav img {
-        height: 20px !important;
+        height: 40px !important;
         transform: translateY(0px);
     }
 
     .nav-bg-scroll nav img {
-        height: 20px !important;
+        height: 40px !important;
     }
 
     .nav-bg nav .nav-links {

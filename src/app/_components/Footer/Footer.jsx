@@ -1,17 +1,29 @@
 "use client"
 import React, {useEffect, useState} from 'react'
 import './Footer.css'
-import Link from "next/link";
+import {useRouter} from 'next/navigation';
 
 export default function Footer() {
-    const scrollToTarget = (targetId) => {
-        //navigate("/")
-        setTimeout(() => {
+    const router = useRouter();
+
+    const scrollToTarget = async (targetId) => {
+        const currentPath = window.location.pathname;
+
+        const scrollToElement = () => {
             const targetElement = document.getElementById(targetId);
             if (targetElement) {
                 targetElement.scrollIntoView({behavior: 'smooth'});
             }
-        }, 200);
+        };
+
+        if (currentPath === '/') {
+            // Already on the homepage, scroll directly to the target section
+            setTimeout(scrollToElement, 200); // Slight delay for page transition
+        } else {
+            // Navigate to the homepage first, then scroll
+            await router.push('/');
+            setTimeout(scrollToElement, 200); // Slight delay for page transition
+        }
     };
 
     return (
@@ -22,6 +34,9 @@ export default function Footer() {
                         <img src='/images/nav-logo.svg' alt='' draggable="false"
                              loading="lazy" placeholder="blur"/>
                         <p>Profesionální převoz sypkých materiálů, zemní práce a demolice na míru</p>
+                        <span>Jméno Příjmení</span>
+                        <span>IČ:</span>
+                        <span>Sídlo</span>
                     </div>
                     <div className="item-wrapper">
                         <div className="item links">
