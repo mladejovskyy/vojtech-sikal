@@ -444,17 +444,28 @@ export default function Home() {
                 </div>
                 <div className="row">
                     <Swiper
-                        slidesPerView={'auto'}
-                        spaceBetween={30}
+                        slidesPerView={4}
                         loop={true}
+                        navigation={{
+                            prevEl: ".prev",
+                            nextEl: ".next",
+                        }}
+                        breakpoints={{
+                            1280: {
+                                slidesPerView: 3,
+                            },
+                            768: {
+                                slidesPerView: 2,
+                            },
+                            475: {
+                                slidesPerView: 1,
+                            },
+                        }}
+                        modules={[Navigation]}
+                        spaceBetween={30}
                         pagination={{
                             clickable: true,
                         }}
-                        navigation={{
-                            nextEl: '.swiper-button-next',
-                            prevEl: '.swiper-button-prev',
-                        }}
-                        modules={[Navigation]}
                         className="mySwiper"
                     >
                         <SwiperSlide>
@@ -512,8 +523,16 @@ export default function Home() {
                             />
                         </SwiperSlide>
                     </Swiper>
-
-
+                    <div className="container">
+                        <div className="actions-buttons-row" id="pricecal">
+                            <img className="prev" src="/images/swiper-arrow-left.svg"
+                                 alt="Pro zobrazení další recenze psané pro firmu redesigner" draggable="false"
+                                 loading="lazy" placeholder="blur"/>
+                            <img className="next" src="/images/swiper-arrow-right.svg"
+                                 alt="Pro zobrazení předchozí recenze psané pro firmu redesigner" draggable="false"
+                                 loading="lazy" placeholder="blur"/>
+                        </div>
+                    </div>
                 </div>
             </section>
             <section className="whyus" id="whyus">
