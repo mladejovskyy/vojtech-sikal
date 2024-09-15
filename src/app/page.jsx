@@ -445,7 +445,7 @@ export default function Home() {
                 <div className="row">
                     <Swiper
                         slidesPerView={4}
-                        loop={true}
+                        watchOverflow={true}
                         navigation={{
                             prevEl: ".prev",
                             nextEl: ".next",
