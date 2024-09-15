@@ -3,8 +3,6 @@ import Navbar from "../_components/Navbar/Navbar";
 import Footer from "../_components/Footer/Footer";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import 'swiper/css';
-import 'swiper/css/pagination';
 import "../globals.css";
 import "../service.css";
 import {useEffect} from "react";
