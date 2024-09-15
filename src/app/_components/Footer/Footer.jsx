@@ -31,7 +31,7 @@ export default function Footer() {
             <div className="container">
                 <div className="row">
                     <div className="item about">
-                        <img src='/images/nav-logo.svg' alt='' draggable="false"
+                        <img src='/images/nav-logo.svg' alt="Logo VStTransGroup s.r.o." draggable="false"
                              loading="lazy" placeholder="blur"/>
                         <p>Profesionální převoz sypkých materiálů, zemní práce a demolice na míru</p>
                         <span>VŠ Trans Group s.r.o.</span>
@@ -51,21 +51,21 @@ export default function Footer() {
                         </div>
                         <div className="item links">
                             <h2>Kontaktujte nás</h2>
-                            <a href='mailto:info@raceczech.cz' target='_blank' rel="noopener noreferrer"><img
-                                src='/images/footer-email.svg' className="footer-email" alt="" draggable="false"
+                            <a href='mailto:info@raceczech.cz' target='_blank' rel="noopener noreferrer" aria-label='Napsat email na emailovou adresu info@vstransgroup.cz'><img
+                                src='/images/footer-email.svg' className="footer-email" alt="Ikona emailu" draggable="false"
                                 loading="lazy"
                                 placeholder="blur"/> info@vstransgroup.cz</a>
-                            <a href='mailto:info@vstransgroup.cz' target='_blank' rel="noopener noreferrer"><img
-                                src='/images/footer-email.svg' className="footer-email" alt="" draggable="false"
+                            <a href='mailto:info@vstransgroup.cz' target='_blank' rel="noopener noreferrer" aria-label='Napsat email na emailovou adresu info@vstransgroup.cz'><img
+                                src='/images/footer-email.svg' className="footer-email" alt="Ikona emailu" draggable="false"
                                 loading="lazy"
                                 placeholder="blur"/> info@vstransgroup.cz</a>
-                            <a href='mailto:info@vstransgroup.cz' target='_blank' rel="noopener noreferrer"><img
-                                src='/images/footer-email.svg' className="footer-email" alt="" draggable="false"
+                            <a href='mailto:info@vstransgroup.cz' target='_blank' rel="noopener noreferrer" aria-label='Napsat email na emailovou adresu info@vstransgroup.cz'><img
+                                src='/images/footer-email.svg' className="footer-email" alt="Ikona emailu" draggable="false"
                                 loading="lazy"
                                 placeholder="blur"/> info@vstransgroup.cz</a>
 
-                            <a href='tel:607727509' target='_blank' rel="noopener noreferrer"><img
-                                src='/images/footer-phone.svg' alt=""
+                            <a href='tel:607727509' target='_blank' rel="noopener noreferrer" aria-label='Zavolat na číslo +420 607 727 509'><img
+                                src='/images/footer-phone.svg' alt="Ikona telefonu"
                                 loading="lazy" placeholder="blur"/> 607 727 509</a>
                         </div>
                     </div>
@@ -73,9 +73,9 @@ export default function Footer() {
                 <div className="bottom-line"></div>
                 <div className="bottom-content">
                     <p>{new Date().getFullYear()} © Copyright VStransgroup.cz Všechna práva vyhrazena</p>
-                    <a href='https://redesigner.cz/' target='_blank' rel="noopener noreferrer">Web na míru od <img
+                    <a href='https://redesigner.cz/' target='_blank' rel="noopener noreferrer" aria-label="Přejít na stránku Redesigner">Web na míru od <img
                         src='/images/logoredesginer.svg'
-                        alt='' draggable="false"
+                        alt='Logo Redesigner' draggable="false"
                         loading="lazy" placeholder="blur"/></a>
                 </div>
             </div>

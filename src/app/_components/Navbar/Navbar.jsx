@@ -74,7 +74,7 @@ export default function Navbar() {
                 <img
                     onClick={() => scrollToTarget("header")}
                     src="/images/nav-logo.svg" className="logo"
-                    alt=""
+                    alt="Logo VStTransGroup s.r.o."
                     draggable="false" loading="eager"
                     placeholder="blur"/>
                 {open ? <ul className="nav-links" data-aos={mobile ? "slide-left" : ""}>

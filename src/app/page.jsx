@@ -3,16 +3,15 @@ import Navbar from "./_components/Navbar/Navbar";
 import Footer from "./_components/Footer/Footer";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import {Swiper, SwiperSlide} from 'swiper/react';
-import {Pagination, Navigation} from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import "./globals.css";
 import "./style.css";
-import {useEffect, useRef} from "react";
+import {useEffect} from "react";
 import Link from "next/link";
 import Image from "next/image";
+import Marquee from "@/components/magicui/marquee";
 
 export default function Home() {
     useEffect(() => {
@@ -29,6 +28,44 @@ export default function Home() {
             }
         }, 200);
     };
+
+    const firstRow = [
+        {
+            img: "/images/gallery-photo1.webp",
+            alt: "",
+        },
+        {
+            img: "/images/gallery-photo2.webp",
+            alt: "",
+        },
+        {
+            img: "/images/gallery-photo1.webp",
+            alt: "",
+        },
+        {
+            img: "/images/gallery-photo2.webp",
+            alt: "",
+        },
+        {
+            img: "/images/gallery-photo1.webp",
+            alt: "",
+        },
+        {
+            img: "/images/gallery-photo2.webp",
+            alt: "",
+        },
+
+    ];
+
+    const ReviewCard = ({img, alt}) => {
+        return (
+            <div>
+                <div className="flex flex-row items-center gap-2">
+                    <img src={img} alt={alt}/>
+                </div>
+            </div>
+        )
+    }
 
     return (
         <>
@@ -63,7 +100,7 @@ export default function Home() {
                         <div className="item" data-aos="zoom-in-up" data-aos-once="true" data-aos-delay="0">
                             <Image
                                 src="/images/services-photo1.webp"
-                                alt=""
+                                alt="Obrázek služby smluvní autodoprava"
                                 draggable="false"
                                 loading="lazy"
                                 placeholder="blur"
@@ -75,11 +112,11 @@ export default function Home() {
                             <div className="bottom">
                                 <div>
                                     <h3>Smluvní autodoprava</h3>
-                                    <Link href={"/smluvni-autodoprava"} className="services-link">
+                                    <Link href={"/smluvni-autodoprava"} className="services-link" aria-label="Přejít na stránku smluvní autodopravy">
                                         <img
                                             className="services-arrow"
                                             src="/images/services-arrow.svg"
-                                            alt=""
+                                            alt="Ikona šipky"
                                             draggable="false"
                                             loading="lazy"
                                             placeholder="blur"
@@ -95,7 +132,7 @@ export default function Home() {
                         <div className="item" data-aos="zoom-in-up" data-aos-once="true" data-aos-delay="100">
                             <Image
                                 src="/images/services-photo2.webp"
-                                alt=""
+                                alt="Obrázek služby zemní práce"
                                 draggable="false"
                                 loading="lazy"
                                 placeholder="blur"
@@ -107,11 +144,11 @@ export default function Home() {
                             <div className="bottom">
                                 <div>
                                     <h3>Zemní práce</h3>
-                                    <Link href={"/zemni-prace"} className="services-link">
+                                    <Link href={"/zemni-prace"} className="services-link" aria-label="Přejít na stránku zemní práce">
                                         <img
                                             className="services-arrow"
                                             src="/images/services-arrow.svg"
-                                            alt=""
+                                            alt="Ikona šipky"
                                             draggable="false"
                                             loading="lazy"
                                             placeholder="blur"
@@ -126,7 +163,7 @@ export default function Home() {
                         <div className="item" data-aos="zoom-in-up" data-aos-once="true" data-aos-delay="200">
                             <Image
                                 src="/images/services-photo3.webp"
-                                alt=""
+                                alt="Obrázek služby demolice objektů"
                                 draggable="false"
                                 loading="lazy"
                                 placeholder="blur"
@@ -138,11 +175,11 @@ export default function Home() {
                             <div className="bottom">
                                 <div>
                                     <h3>Demolice objektů</h3>
-                                    <Link href={"/demolice-objektu"} className="services-link">
+                                    <Link href={"/demolice-objektu"} className="services-link" aria-label="Přejít na stránku demolice objektů">
                                         <img
                                             className="services-arrow"
                                             src="/images/services-arrow.svg"
-                                            alt=""
+                                            alt="Ikona šipky"
                                             draggable="false"
                                             loading="lazy"
                                             placeholder="blur"
@@ -165,7 +202,7 @@ export default function Home() {
                         <div className="item" data-aos="fade-up" data-aos-once="true" data-aos-delay="0">
                             <Image
                                 src="/images/vehicles-photo1.webp"
-                                alt=""
+                                alt="Foto Scania 8x4"
                                 draggable="false"
                                 loading="lazy"
                                 placeholder="blur"
@@ -180,7 +217,7 @@ export default function Home() {
                                     <div className="benefit">
                                         <img
                                             src="/images/vehicles-check.svg"
-                                            alt=""
+                                            alt="Ikona zaškrtnutí"
                                             draggable="false"
                                             loading="lazy"
                                             placeholder="blur"
@@ -190,7 +227,7 @@ export default function Home() {
                                     <div className="benefit">
                                         <img
                                             src="/images/vehicles-check.svg"
-                                            alt=""
+                                            alt="Ikona zaškrtnutí"
                                             draggable="false"
                                             loading="lazy"
                                             placeholder="blur"
@@ -200,7 +237,7 @@ export default function Home() {
                                     <div className="benefit">
                                         <img
                                             src="/images/vehicles-check.svg"
-                                            alt=""
+                                            alt="Ikona zaškrtnutí"
                                             draggable="false"
                                             loading="lazy"
                                             placeholder="blur"
@@ -214,7 +251,7 @@ export default function Home() {
                         <div className="item" data-aos="fade-up" data-aos-once="true" data-aos-delay="50">
                             <Image
                                 src="/images/vehicles-photo2.webp"
-                                alt=""
+                                alt="Foto Volvo 8x4"
                                 draggable="false"
                                 loading="lazy"
                                 placeholder="blur"
@@ -229,7 +266,7 @@ export default function Home() {
                                     <div className="benefit">
                                         <img
                                             src="/images/vehicles-check.svg"
-                                            alt=""
+                                            alt="Ikona zaškrtnutí"
                                             draggable="false"
                                             loading="lazy"
                                             placeholder="blur"
@@ -239,7 +276,7 @@ export default function Home() {
                                     <div className="benefit">
                                         <img
                                             src="/images/vehicles-check.svg"
-                                            alt=""
+                                            alt="Ikona zaškrtnutí"
                                             draggable="false"
                                             loading="lazy"
                                             placeholder="blur"
@@ -249,7 +286,7 @@ export default function Home() {
                                     <div className="benefit">
                                         <img
                                             src="/images/vehicles-check.svg"
-                                            alt=""
+                                            alt="Ikona zaškrtnutí"
                                             draggable="false"
                                             loading="lazy"
                                             placeholder="blur"
@@ -263,7 +300,7 @@ export default function Home() {
                         <div className="item" data-aos="fade-up" data-aos-once="true" data-aos-delay="100">
                             <Image
                                 src="/images/vehicles-photo3.webp"
-                                alt=""
+                                alt="Foto tahače s thermo sklápěcím návěsem"
                                 draggable="false"
                                 loading="lazy"
                                 placeholder="blur"
@@ -278,7 +315,7 @@ export default function Home() {
                                     <div className="benefit">
                                         <img
                                             src="/images/vehicles-check.svg"
-                                            alt=""
+                                            alt="Ikona zaškrtnutí"
                                             draggable="false"
                                             loading="lazy"
                                             placeholder="blur"
@@ -288,7 +325,7 @@ export default function Home() {
                                     <div className="benefit">
                                         <img
                                             src="/images/vehicles-check.svg"
-                                            alt=""
+                                            alt="Ikona zaškrtnutí"
                                             draggable="false"
                                             loading="lazy"
                                             placeholder="blur"
@@ -298,7 +335,7 @@ export default function Home() {
                                     <div className="benefit">
                                         <img
                                             src="/images/vehicles-check.svg"
-                                            alt=""
+                                            alt="Ikona zaškrtnutí"
                                             draggable="false"
                                             loading="lazy"
                                             placeholder="blur"
@@ -312,7 +349,7 @@ export default function Home() {
                         <div className="item" data-aos="fade-up" data-aos-once="true" data-aos-delay="150">
                             <Image
                                 src="/images/vehicles-photo4.webp"
-                                alt=""
+                                alt="Foto tahače s návěsu"
                                 draggable="false"
                                 loading="lazy"
                                 placeholder="blur"
@@ -327,7 +364,7 @@ export default function Home() {
                                     <div className="benefit">
                                         <img
                                             src="/images/vehicles-check.svg"
-                                            alt=""
+                                            alt="Ikona zaškrtnutí"
                                             draggable="false"
                                             loading="lazy"
                                             placeholder="blur"
@@ -337,7 +374,7 @@ export default function Home() {
                                     <div className="benefit">
                                         <img
                                             src="/images/vehicles-check.svg"
-                                            alt=""
+                                            alt="Ikona zaškrtnutí"
                                             draggable="false"
                                             loading="lazy"
                                             placeholder="blur"
@@ -347,7 +384,7 @@ export default function Home() {
                                     <div className="benefit">
                                         <img
                                             src="/images/vehicles-check.svg"
-                                            alt=""
+                                            alt="Ikona zaškrtnutí"
                                             draggable="false"
                                             loading="lazy"
                                             placeholder="blur"
@@ -361,7 +398,7 @@ export default function Home() {
                         <div className="item" data-aos="fade-up" data-aos-once="true" data-aos-delay="200">
                             <Image
                                 src="/images/vehicles-photo5.webp"
-                                alt=""
+                                alt="Foto jumbo soupravy"
                                 draggable="false"
                                 loading="lazy"
                                 placeholder="blur"
@@ -376,7 +413,7 @@ export default function Home() {
                                     <div className="benefit">
                                         <img
                                             src="/images/vehicles-check.svg"
-                                            alt=""
+                                            alt="Ikona zaškrtnutí"
                                             draggable="false"
                                             loading="lazy"
                                             placeholder="blur"
@@ -386,7 +423,7 @@ export default function Home() {
                                     <div className="benefit">
                                         <img
                                             src="/images/vehicles-check.svg"
-                                            alt=""
+                                            alt="Ikona zaškrtnutí"
                                             draggable="false"
                                             loading="lazy"
                                             placeholder="blur"
@@ -399,7 +436,7 @@ export default function Home() {
                         <div className="item" data-aos="fade-up" data-aos-once="true" data-aos-delay="250">
                             <Image
                                 src="/images/vehicles-photo6.webp"
-                                alt=""
+                                alt="Foto cisterny"
                                 draggable="false"
                                 loading="lazy"
                                 placeholder="blur"
@@ -414,7 +451,7 @@ export default function Home() {
                                     <div className="benefit">
                                         <img
                                             src="/images/vehicles-check.svg"
-                                            alt=""
+                                            alt="Ikona zaškrtnutí"
                                             draggable="false"
                                             loading="lazy"
                                             placeholder="blur"
@@ -424,7 +461,7 @@ export default function Home() {
                                     <div className="benefit">
                                         <img
                                             src="/images/vehicles-check.svg"
-                                            alt=""
+                                            alt="Ikona zaškrtnutí"
                                             draggable="false"
                                             loading="lazy"
                                             placeholder="blur"
@@ -443,95 +480,12 @@ export default function Home() {
                     <h2>Galerie naší práce</h2>
                 </div>
                 <div className="row">
-                    <Swiper
-                        slidesPerView={4}
-                        watchOverflow={true}
-                        navigation={{
-                            prevEl: ".prev",
-                            nextEl: ".next",
-                        }}
-                        breakpoints={{
-                            1280: {
-                                slidesPerView: 3,
-                            },
-                            768: {
-                                slidesPerView: 2,
-                            },
-                            475: {
-                                slidesPerView: 1,
-                            },
-                        }}
-                        modules={[Navigation]}
-                        spaceBetween={30}
-                        pagination={{
-                            clickable: true,
-                        }}
-                        className="mySwiper"
-                    >
-                        <SwiperSlide>
-                            <img
-                                src="/images/gallery-photo1.webp"
-                                alt=""
-                                draggable="false"
-                                loading="lazy"
-                                placeholder="blur"
-                            />
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <img
-                                src="/images/gallery-photo2.webp"
-                                alt=""
-                                draggable="false"
-                                loading="lazy"
-                                placeholder="blur"
-                            />
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <img
-                                src="/images/gallery-photo1.webp"
-                                alt=""
-                                draggable="false"
-                                loading="lazy"
-                                placeholder="blur"
-                            />
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <img
-                                src="/images/gallery-photo2.webp"
-                                alt=""
-                                draggable="false"
-                                loading="lazy"
-                                placeholder="blur"
-                            />
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <img
-                                src="/images/gallery-photo1.webp"
-                                alt=""
-                                draggable="false"
-                                loading="lazy"
-                                placeholder="blur"
-                            />
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <img
-                                src="/images/gallery-photo2.webp"
-                                alt=""
-                                draggable="false"
-                                loading="lazy"
-                                placeholder="blur"
-                            />
-                        </SwiperSlide>
-                    </Swiper>
-                    <div className="container">
-                        <div className="actions-buttons-row" id="pricecal">
-                            <img className="prev" src="/images/swiper-arrow-left.svg"
-                                 alt="Pro zobrazení další recenze psané pro firmu redesigner" draggable="false"
-                                 loading="lazy" placeholder="blur"/>
-                            <img className="next" src="/images/swiper-arrow-right.svg"
-                                 alt="Pro zobrazení předchozí recenze psané pro firmu redesigner" draggable="false"
-                                 loading="lazy" placeholder="blur"/>
-                        </div>
+                    <div>
+                        <Marquee pauseOnHover className="[--duration:40s]">
+                            {firstRow.map((review) => (
+                                <ReviewCard key={review.img} {...review} />
+                            ))}
+                        </Marquee>
                     </div>
                 </div>
             </section>
@@ -561,7 +515,7 @@ export default function Home() {
                         <div className="item">
                             <img
                                 src="/images/whyus-photo.webp"
-                                alt=""
+                                alt="Foto nákladního vozidla"
                                 draggable="false"
                                 loading="lazy"
                                 placeholder="blur"
@@ -578,7 +532,7 @@ export default function Home() {
                             <h2>Cenovou nabídku tvoříme po detailním vyměření práce</h2>
                             <p>Zavolejte nám s vaším požadavkem a my se vám pokusíme vyhovět</p>
                             <div className="btns-row" data-aos="fade-right" data-aos-once="true">
-                                <Link href={'tel:607727509'}>
+                                <Link href={'tel:607727509'} aria-label='Zavolat na číslo +420 607 727 509'>
                                     <button className="btn-secondary">+420 607 727 509</button>
                                 </Link>
                             </div>
@@ -586,7 +540,7 @@ export default function Home() {
                         <div className="item">
                             <img
                                 src="/images/contact-photo.webp"
-                                alt=""
+                                alt="Foto nákladního vozidla"
                                 draggable="false"
                                 loading="lazy"
                                 placeholder="blur"

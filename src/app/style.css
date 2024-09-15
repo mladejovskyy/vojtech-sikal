@@ -221,8 +221,9 @@
     cursor: grabbing;
 }
 
-.gallery .swiper-slide img {
+.gallery img {
     width: 27vw;
+    cursor: pointer;
 }
 
 .gallery .actions-buttons-row {
@@ -238,19 +239,19 @@
 }
 
 @media (max-width: 1280px) {
-    .gallery .swiper-slide img {
+    .gallery img {
         width: 40vw;
     }
 }
 
 @media (max-width: 768px) {
-    .gallery .swiper-slide img {
+    .gallery img {
         width: 50vw;
     }
 }
 
 @media (max-width: 475px) {
-    .gallery .swiper-slide img {
+    .gallery img {
         width: 85vw;
     }
 }

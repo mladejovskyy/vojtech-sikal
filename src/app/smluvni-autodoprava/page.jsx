@@ -25,7 +25,7 @@ export default function SmluvniAutodopravaPage() {
                         <Link href={'../'}>
                             <img
                                 src="/images/servicepage-arrow.svg"
-                                alt=""
+                                alt="Ikona šipky zpět"
                                 draggable="false"
                                 loading="eager"
                                 placeholder="blur"
@@ -62,7 +62,7 @@ export default function SmluvniAutodopravaPage() {
                             <div className="item">
                                 <img
                                     src="/images/servicepage-photo1.webp"
-                                    alt=""
+                                    alt="Foto nákladních vozidel"
                                     draggable="false"
                                     loading="eager"
                                     placeholder="blur"
@@ -88,7 +88,7 @@ export default function SmluvniAutodopravaPage() {
                         <div className="item">
                             <img
                                 src="/images/contact-photo.webp"
-                                alt=""
+                                alt="Foto nákladního vozidla"
                                 draggable="false"
                                 loading="lazy"
                                 placeholder="blur"

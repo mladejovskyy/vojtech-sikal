@@ -25,7 +25,7 @@ export default function DemoliceObjektuPage() {
                         <Link href={'../'}>
                             <img
                                 src="/images/servicepage-arrow.svg"
-                                alt=""
+                                alt="Ikona šipky zpět"
                                 draggable="false"
                                 loading="eager"
                                 placeholder="blur"
@@ -58,7 +58,7 @@ export default function DemoliceObjektuPage() {
                             <div className="item">
                                 <img
                                     src="/images/servicepage-photo3.webp"
-                                    alt=""
+                                    alt="Foto demolice objektu"
                                     draggable="false"
                                     loading="eager"
                                     placeholder="blur"
@@ -84,7 +84,7 @@ export default function DemoliceObjektuPage() {
                         <div className="item">
                             <img
                                 src="/images/contact-photo.webp"
-                                alt=""
+                                alt="Foto nákladního vozidla"
                                 draggable="false"
                                 loading="lazy"
                                 placeholder="blur"

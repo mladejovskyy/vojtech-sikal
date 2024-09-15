@@ -25,7 +25,7 @@ export default function ZemniPracePage() {
                         <Link href={'../'}>
                             <img
                                 src="/images/servicepage-arrow.svg"
-                                alt=""
+                                alt="Ikona šipky zpět"
                                 draggable="false"
                                 loading="eager"
                                 placeholder="blur"
@@ -54,7 +54,7 @@ export default function ZemniPracePage() {
                                         <li>
                                             <img
                                                 src="/images/vehicles-check.svg"
-                                                alt=""
+                                                alt="Ikona zaškrtnutí"
                                                 draggable="false"
                                                 loading="lazy"
                                                 placeholder="blur"
@@ -64,7 +64,7 @@ export default function ZemniPracePage() {
                                         <li>
                                             <img
                                                 src="/images/vehicles-check.svg"
-                                                alt=""
+                                                alt="Ikona zaškrtnutí"
                                                 draggable="false"
                                                 loading="lazy"
                                                 placeholder="blur"
@@ -74,7 +74,7 @@ export default function ZemniPracePage() {
                                         <li>
                                             <img
                                                 src="/images/vehicles-check.svg"
-                                                alt=""
+                                                alt="Ikona zaškrtnutí"
                                                 draggable="false"
                                                 loading="lazy"
                                                 placeholder="blur"
@@ -84,7 +84,7 @@ export default function ZemniPracePage() {
                                         <li>
                                             <img
                                                 src="/images/vehicles-check.svg"
-                                                alt=""
+                                                alt="Ikona zaškrtnutí"
                                                 draggable="false"
                                                 loading="lazy"
                                                 placeholder="blur"
@@ -94,7 +94,7 @@ export default function ZemniPracePage() {
                                         <li>
                                             <img
                                                 src="/images/vehicles-check.svg"
-                                                alt=""
+                                                alt="Ikona zaškrtnutí"
                                                 draggable="false"
                                                 loading="lazy"
                                                 placeholder="blur"
@@ -104,7 +104,7 @@ export default function ZemniPracePage() {
                                         <li>
                                             <img
                                                 src="/images/vehicles-check.svg"
-                                                alt=""
+                                                alt="Ikona zaškrtnutí"
                                                 draggable="false"
                                                 loading="lazy"
                                                 placeholder="blur"
@@ -124,7 +124,7 @@ export default function ZemniPracePage() {
                             <div className="item">
                                 <img
                                     src="/images/servicepage-photo2.webp"
-                                    alt=""
+                                    alt="Foto zemních prací"
                                     draggable="false"
                                     loading="eager"
                                     placeholder="blur"
@@ -150,7 +150,7 @@ export default function ZemniPracePage() {
                         <div className="item">
                             <img
                                 src="/images/contact-photo.webp"
-                                alt=""
+                                alt="Foto nákladního vozidla"
                                 draggable="false"
                                 loading="lazy"
                                 placeholder="blur"
