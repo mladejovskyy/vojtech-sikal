@@ -453,7 +453,7 @@ export default function Home() {
                                             loading="lazy"
                                             placeholder="blur"
                                         />
-                                        Užitná plocha 120m³
+                                        Cisterna potravinářská tlaková objem 32 m3
                                     </div>
                                     <div className="benefit">
                                         <img
@@ -463,8 +463,19 @@ export default function Home() {
                                             loading="lazy"
                                             placeholder="blur"
                                         />
-                                        Užitná hmotnost 24 tun
+                                        izolovaná 3 komory
                                     </div>
+                                    <div className="benefit">
+                                        <img
+                                            src="/images/vehicles-check.svg"
+                                            alt="Ikona zaškrtnutí"
+                                            draggable="false"
+                                            loading="lazy"
+                                            placeholder="blur"
+                                        />
+                                        provozována v režimu GMP+ pro přepravu potravin
+                                    </div>
+
                                 </div>
                             </div>
                         </div>

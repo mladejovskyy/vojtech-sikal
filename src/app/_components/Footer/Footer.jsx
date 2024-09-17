@@ -51,19 +51,10 @@ export default function Footer() {
                         </div>
                         <div className="item links">
                             <h2>Kontaktujte nás</h2>
-                            <a href='mailto:info@raceczech.cz' target='_blank' rel="noopener noreferrer" aria-label='Napsat email na emailovou adresu info@vstransgroup.cz'><img
+                            <a href='mailto:sikal@vstransgroup.cz' target='_blank' rel="noopener noreferrer" aria-label='Napsat email na emailovou adresu info@vstransgroup.cz'><img
                                 src='/images/footer-email.svg' className="footer-email" alt="Ikona emailu" draggable="false"
                                 loading="lazy"
-                                placeholder="blur"/> info@vstransgroup.cz</a>
-                            <a href='mailto:info@vstransgroup.cz' target='_blank' rel="noopener noreferrer" aria-label='Napsat email na emailovou adresu info@vstransgroup.cz'><img
-                                src='/images/footer-email.svg' className="footer-email" alt="Ikona emailu" draggable="false"
-                                loading="lazy"
-                                placeholder="blur"/> info@vstransgroup.cz</a>
-                            <a href='mailto:info@vstransgroup.cz' target='_blank' rel="noopener noreferrer" aria-label='Napsat email na emailovou adresu info@vstransgroup.cz'><img
-                                src='/images/footer-email.svg' className="footer-email" alt="Ikona emailu" draggable="false"
-                                loading="lazy"
-                                placeholder="blur"/> info@vstransgroup.cz</a>
-
+                                placeholder="blur"/> sikal@vstransgroup.cz</a>
                             <a href='tel:607727509' target='_blank' rel="noopener noreferrer" aria-label='Zavolat na číslo +420 607 727 509'><img
                                 src='/images/footer-phone.svg' alt="Ikona telefonu"
                                 loading="lazy" placeholder="blur"/> 607 727 509</a>
