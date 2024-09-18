@@ -36,22 +36,29 @@ export default function Home() {
             alt: "",
         },
         {
-            img: "/images/gallery-photo1.webp",
+            img: "/images/gallery-photo3.webp",
             alt: "",
         },
         {
-            img: "/images/gallery-photo2.webp",
+            img: "/images/gallery-photo4.webp",
             alt: "",
         },
         {
-            img: "/images/gallery-photo1.webp",
+            img: "/images/gallery-photo5.webp",
             alt: "",
         },
         {
-            img: "/images/gallery-photo2.webp",
+            img: "/images/gallery-photo6.webp",
             alt: "",
         },
-
+        {
+            img: "/images/gallery-photo7.webp",
+            alt: "",
+        },
+        {
+            img: "/images/gallery-photo8.webp",
+            alt: "",
+        },
     ];
 
     const ReviewCard = ({img, alt}) => {
