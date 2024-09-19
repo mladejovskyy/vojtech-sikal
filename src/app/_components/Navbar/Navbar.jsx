@@ -79,11 +79,11 @@ export default function Navbar() {
                     placeholder="blur"/>
                 {open ? <ul className="nav-links" data-aos={mobile ? "slide-left" : ""}>
                     <>
-                        <li onClick={() => scrollToTarget("header")}>Úvod
-                        </li>
-                        <li onClick={() => scrollToTarget("services")}>Služby
-                        </li>
                         <li onClick={() => scrollToTarget("vehicles")}>Vozový park
+                        </li>
+                        <li onClick={() => scrollToTarget("gallery")}>Galerie
+                        </li>
+                        <li onClick={() => scrollToTarget("whyus")}>O nás
                         </li>
                         <li onClick={() => scrollToTarget("contact")}>Kontakty
                         </li>

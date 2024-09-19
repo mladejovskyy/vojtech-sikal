@@ -68,9 +68,8 @@
     width: 43px;
     height: 43px;
     border-radius: 2px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    place-items: center;
     transition: background-color 0.2s ease-in-out;
 }
 
@@ -78,7 +77,7 @@
     background-color: rgba(255, 255, 255, 0.9);
 }
 
-.services .item .bottom div {
+.services .item .bottom .wrapper {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -139,7 +138,7 @@
 .vehicles .item .right {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 .vehicles .benefits {

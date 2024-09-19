@@ -1,4 +1,4 @@
-"use client";
+"use client"
 import Navbar from "./_components/Navbar/Navbar";
 import Footer from "./_components/Footer/Footer";
 import AOS from "aos";
@@ -101,7 +101,7 @@ export default function Home() {
                     <h4>Služby</h4>
                     <h2>Jaké služby nabízíme?</h2>
                     <div className="row">
-                        <div className="item" data-aos="zoom-in-up" data-aos-once="true" data-aos-delay="0">
+                        <Link href={"/smluvni-autodoprava"} className="item" data-aos="zoom-in-up" data-aos-once="true" data-aos-delay="0">
                             <Image
                                 src="/images/services-photo1.webp"
                                 alt="Obrázek služby smluvní autodoprava"
@@ -114,9 +114,9 @@ export default function Home() {
                                 blurDataURL="iVBORw0KGgoAAAANSUhEUgAAAAUAAAADCAQAAADxPw1zAAAAEElEQVR42mP8v50BChixMgFqCAUmt6RorAAAAABJRU5ErkJggg=="
                             />
                             <div className="bottom">
-                                <div>
+                                <div className="wrapper">
                                     <h3>Smluvní autodoprava</h3>
-                                    <Link href={"/smluvni-autodoprava"} className="services-link" aria-label="Přejít na stránku smluvní autodopravy">
+                                    <div className="services-link" aria-label="Přejít na stránku smluvní autodopravy">
                                         <img
                                             className="services-arrow"
                                             src="/images/services-arrow.svg"
@@ -125,15 +125,15 @@ export default function Home() {
                                             loading="lazy"
                                             placeholder="blur"
                                         />
-                                    </Link>
+                                    </div>
                                 </div>
                                 <p className="paragraph">
                                     Vnitrostátní i mezinárodní kamionová doprava a přeprava
                                     sypkých materiálů.
                                 </p>
                             </div>
-                        </div>
-                        <div className="item" data-aos="zoom-in-up" data-aos-once="true" data-aos-delay="100">
+                        </Link>
+                        <Link href={"/zemni-prace"} className="item" data-aos="zoom-in-up" data-aos-once="true" data-aos-delay="100">
                             <Image
                                 src="/images/services-photo2.webp"
                                 alt="Obrázek služby zemní práce"
@@ -146,9 +146,9 @@ export default function Home() {
                                 blurDataURL="iVBORw0KGgoAAAANSUhEUgAAAAUAAAADCAQAAADxPw1zAAAAEElEQVR42mP8v50BChixMgFqCAUmt6RorAAAAABJRU5ErkJggg=="
                             />
                             <div className="bottom">
-                                <div>
+                                <div className="wrapper">
                                     <h3>Zemní práce</h3>
-                                    <Link href={"/zemni-prace"} className="services-link" aria-label="Přejít na stránku zemní práce">
+                                    <div className="services-link" aria-label="Přejít na stránku zemní práce">
                                         <img
                                             className="services-arrow"
                                             src="/images/services-arrow.svg"
@@ -157,14 +157,14 @@ export default function Home() {
                                             loading="lazy"
                                             placeholder="blur"
                                         />
-                                    </Link>
+                                    </div>
                                 </div>
                                 <p className="paragraph">
                                     Nabízíme profesionální zemní práce: kopání, úprava terénu a zpevnění půdy.
                                 </p>
                             </div>
-                        </div>
-                        <div className="item" data-aos="zoom-in-up" data-aos-once="true" data-aos-delay="200">
+                        </Link>
+                        <Link href={"/demolice-objektu"} className="item" data-aos="zoom-in-up" data-aos-once="true" data-aos-delay="200">
                             <Image
                                 src="/images/services-photo3.webp"
                                 alt="Obrázek služby demolice objektů"
@@ -177,9 +177,9 @@ export default function Home() {
                                 blurDataURL="iVBORw0KGgoAAAANSUhEUgAAAAUAAAADCAQAAADxPw1zAAAAEElEQVR42mP8v50BChixMgFqCAUmt6RorAAAAABJRU5ErkJggg=="
                             />
                             <div className="bottom">
-                                <div>
+                                <div className="wrapper">
                                     <h3>Demolice objektů</h3>
-                                    <Link href={"/demolice-objektu"} className="services-link" aria-label="Přejít na stránku demolice objektů">
+                                    <div className="services-link" aria-label="Přejít na stránku demolice objektů">
                                         <img
                                             className="services-arrow"
                                             src="/images/services-arrow.svg"
@@ -188,13 +188,13 @@ export default function Home() {
                                             loading="lazy"
                                             placeholder="blur"
                                         />
-                                    </Link>
+                                    </div>
                                 </div>
                                 <p className="paragraph">
                                     Nabízíme demolici objektů: bezpečné a efektivní odstranění stavebních struktur.
                                 </p>
                             </div>
-                        </div>
+                        </Link>
                     </div>
                 </div>
             </section>

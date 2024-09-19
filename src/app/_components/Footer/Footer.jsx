@@ -31,7 +31,7 @@ export default function Footer() {
             <div className="container">
                 <div className="row">
                     <div className="item about">
-                        <img src='/images/nav-logo.svg' alt="Logo VStTransGroup s.r.o." draggable="false"
+                        <img onClick={() => scrollToTarget("header")} src='/images/nav-logo.svg' alt="Logo VStTransGroup s.r.o." draggable="false"
                              loading="lazy" placeholder="blur"/>
                         <p>Profesionální převoz sypkých materiálů, zemní práce a demolice na míru</p>
                         <span>VŠ Trans Group s.r.o.</span>
